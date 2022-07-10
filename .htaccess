@@ -1,4 +1,4 @@
-# BEGIN Cache-Control Headers
+<!-- # BEGIN Cache-Control Headers
 <IfModule mod_headers.c>
 <FilesMatch "\.(ico|jpe?g|png|gif|swf|css|gz)$">
 Header set Cache-Control "max-age=2592000, public"
@@ -16,6 +16,11 @@ Header unset Cache-Control
 </IfModule>
 # END Cache-Control Headers
 
+AddDefaultCharset Off
+    #AddDefaultCharset UTF-8
+    AddType 'text/html; charset=UTF-8' html    
+    AddType image/webp .webp
+
 # BEGIN Expires Headers
 <IfModule mod_expires.c>
 ExpiresActive On
@@ -30,4 +35,4 @@ ExpiresByType application/x-shockwave-flash "access plus 1 month"
 ExpiresByType image/x-icon "access plus 1 year"
 ExpiresDefault "access plus 2 days"
 </IfModule>
-# END Expires Headers
+# END Expires Headers -->
